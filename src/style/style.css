@@ -1,0 +1,253 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #000;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2rem;
+  margin-bottom: 1.3rem;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 2.3;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 1rem;
+  border-radius: 24px;
+  padding: 2rem;
+  margin: 2rem auto;
+  background: linear-gradient(to bottom, #CAFFA0,98%,#FBFFDE)
+}
+
+.header {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header-bottom {
+  width: 356px;
+  height: 212px;
+  background: url(../img/group.png);
+  background-size: cover;
+}
+/* style slider */
+.slideshow-container {
+  width: 576px;
+  height: 392px;
+  background-color: #fff;
+  border-radius: 24px;
+  position: relative;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  bottom: 1rem;
+  width: 108px;
+  height: 44px;
+  border-radius: 12px;
+  margin-top: -22px;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+  background: #383838;
+  z-index: 10;
+}
+
+.prev:hover, .next:hover{
+  background: #1b1b1b;
+}
+
+.prev {
+  left: 1.3rem;
+}
+
+.next {
+  right: 1.3rem;
+}
+
+.numbertext {
+  color: #333;
+  font-size: 16px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 36px;
+  right: 32px;
+}
+
+.active:hover {
+  background-color: #717171;
+}
+
+/* animate slider */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* style form 1 */
+.form1-cont {
+  padding: 2rem;
+  height: 392px;
+}
+
+.form1-radio-cont{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 16px;
+}
+
+.form1-radio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 0 16px;
+  background: #f5f5f5;
+}
+
+input[type="radio"]:checked  {
+  accent-color: #0a0a0a;
+}
+
+.form1-active {
+  background: #fff;
+}
+/*  */
+.form2-select {
+  position: relative;
+}
+
+select {
+  position: relative;
+  appearance: none;
+  outline: 0;
+  background: #fff;
+  background-image: none;
+  color: #333;
+  line-height: 50px;
+  width: 100%;
+  height: 60px;
+  line-height: 50px;
+  border: 1px solid #333;
+  border-radius: 24px;
+  padding-left: 18px;
+  font-size: 16px;
+  padding-top: 12px;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.select2{
+  position: relative;
+}
+
+.form2::after {
+  content: 'Город';
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  font-size: 12px;
+  z-index: 2;
+  color: #777;
+}
+
+.form2-select::before {
+  position: absolute;
+  content: "";
+  top: 20px;
+  right: 20px;
+  width: 12px;
+  height: 12px;
+  border: 1px solid transparent;
+  border-color: transparent transparent#333 #333;
+  transform: rotate(-45deg);
+  z-index: 2;
+}
+
+.form4 {
+  grid-template-columns: repeat(1,1fr);
+}
+
+.form7::after {
+  content: 'Специальность';
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  font-size: 12px;
+  z-index: 2;
+  color: #777;
+}
+
+input{
+  border: none;
+  background: transparent;
+  /* height: 50px; */
+  line-height: 50px;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding-left: 18px;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type='submit'] {
+  cursor: pointer;
+  position: absolute;
+  bottom: 3rem;
+  left: 9rem;
+  width: 45%;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 12px;
+  margin-top: -22px;
+  padding: 0;
+  color: rgba(255, 255, 255);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+  background: #383838;
+  z-index: 10;
+}
+
